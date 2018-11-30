@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.Map;
 
 /**
@@ -50,5 +51,11 @@ public class HomeController {
             return "user/login";
         }
 
+    }
+
+    @RequestMapping()
+    public String logout(HttpSession session) {
+        loginService.logout();
+        return "user/login";
     }
 }

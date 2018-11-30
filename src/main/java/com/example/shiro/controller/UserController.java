@@ -4,13 +4,13 @@ import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.annotation.Resource;
 
 /**
  * @author szkingdom_nongky
  * @date 2018.11.30
  */
 @Controller
+@RequestMapping("user")
 public class UserController {
 
     @RequestMapping("/view")
